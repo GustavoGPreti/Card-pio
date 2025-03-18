@@ -1,104 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sweet Cakes | Delícias Artesanais</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img src="/img/images (4).jpeg" alt="Sweet Cakes logo" width="50" height="50">
-            <h1>Sweet Cakes</h1>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/images (4).jpeg" alt="Logotipo da Sweet Cakes" width="50" height="50">
+                <h1>Sweet <span>Cakes</span></h1>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Abrir menu de navegação">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav aria-label="Navegação principal">
+                <ul class="nav-menu">
+                    <li><a href="#bolos">Bolos</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Add hamburger menu button -->
-        <button class="nav-toggle" aria-label="Toggle navigation menu">
-            <span class="hamburger"></span>
-        </button>
-    
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#bolos" aria-label="Ver seção de bolos">Bolos</a></li>
-                <li><a href="#bebidas" aria-label="Ver seção de bebidas">Bebidas</a></li>
-            </ul>
-        </nav>
     </header>
-    <main id="bolos">
-        <article>
-            <img src="img/download.jpeg" alt="bolo de morango">
-            <h2>bolo de morango</h2>
-            <p>bolo saboroso de morango com calda de chocolate da casa</p>
-            <span>R$20,00</span>
-        </article>
-        <article>
-            <img src="img/download (1).jpeg" alt="bolo de chocolate">
-            <h2>bolo de chocolate</h2>
-            <p>bolo saboroso de chocolate com açúcar branco</p>
-            <span>R$25,00</span>
-        </article>
-        <article>
-            <img src="img/images (4).jpeg" alt="bolo de cenoura">
-            <h2>bolo de cenoura</h2>
-            <p>bolo saboroso de cenoura com calda de chocolate da casa</p>
-            <span>R$20,00</span>
-        </article>
-    </main>
-    <main id="bebidas">
-        <article>
-            <img src="img/download5.jpeg" alt="suco de laranja">
-            <h2>Suco de laranja</h2>
-            <p>Suco de laranja natural</p>
-            <span>R$5,00</span>
-        </article>
-        <article>
-            <img src="img/download6.jpeg" alt="suco de uva">
-            <h2>Suco de uva</h2>
-            <p>Suco de uva natural</p>
-            <span>R$5,00</span>
-        </article>
-        <article>
-            <img src="img/download7.jpeg" alt="suco de abacaxi">
-            <h2>Suco de abacaxi</h2>
-            <p>Suco de abacaxi natural</p>
-            <span>R$5,00</span>
-        </article>
+    
+    <div class="hero">
+        <div class="container">
+            <h2>Sabores que encantam</h2>
+            <p>Bolos artesanais preparados com amor e ingredientes selecionados</p>
+            <a href="#bolos" class="btn-primary">Ver Cardápio</a>
+        </div>
+    </div>
 
+    <main>
+        <div class="container">
+            <section id="bolos" class="menu-section">
+                <div class="section-header">
+                    <h2>Nossos Bolos</h2>
+                    <p>Deliciosas opções feitas com carinho para você</p>
+                </div>
+                
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/download.jpeg" alt="Bolo de morango">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bolo de Morango</h3>
+                            <p>Bolo saboroso de morango com calda de chocolate da casa.</p>
+                            <div class="product-price">R$ 20,00</div>
+                            <button class="btn-secondary">Adicionar</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/download (1).jpeg" alt="Bolo de chocolate">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bolo de Chocolate</h3>
+                            <p>Bolo saboroso de chocolate com açúcar branco.</p>
+                            <div class="product-price">R$ 25,00</div>
+                            <button class="btn-secondary">Adicionar</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/images (4).jpeg" alt="Bolo de cenoura">
+                        </div>
+                        <div class="product-info">
+                            <h3>Bolo de Cenoura</h3>
+                            <p>Bolo saboroso de cenoura com calda de chocolate da casa.</p>
+                            <div class="product-price">R$ 20,00</div>
+                            <button class="btn-secondary">Adicionar</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <section id="bebidas" class="menu-section">
+                <div class="section-header">
+                    <h2>Bebidas Refrescantes</h2>
+                    <p>O complemento perfeito para suas sobremesas</p>
+                </div>
+                
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/download5.jpeg" alt="Suco de laranja">
+                        </div>
+                        <div class="product-info">
+                            <h3>Suco de Laranja</h3>
+                            <p>Suco de laranja natural, fresco e saudável.</p>
+                            <div class="product-price">R$ 5,00</div>
+                            <button class="btn-secondary">Adicionar</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/download6.jpeg" alt="Suco de uva">
+                        </div>
+                        <div class="product-info">
+                            <h3>Suco de Uva</h3>
+                            <p>Suco de uva natural, refrescante e delicioso.</p>
+                            <div class="product-price">R$ 5,00</div>
+                            <button class="btn-secondary">Adicionar</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/download7.jpeg" alt="Suco de abacaxi">
+                        </div>
+                        <div class="product-info">
+                            <h3>Suco de Abacaxi</h3>
+                            <p>Suco de abacaxi natural, tropical e revigorante.</p>
+                            <div class="product-price">R$ 5,00</div>
+                            <button class="btn-secondary">Adicionar</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
+    
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Estamos à disposição para atender seu pedido especial</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <p>(44) 99010-264</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <p>Rua dos Doces, 123 - Centro</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <p>contato@sweetcakes.com</p>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h1>Sweet<span class="highlight">Cakes</span></h1>
-                    <span>O verdadeiro bolo você encontra aqui.</span>
+                    <h3>Sweet<span>Cakes</span></h3>
+                    <p>O verdadeiro sabor da felicidade você encontra aqui.</p>
                 </div>
+                
                 <nav class="footer-nav">
-                    <a href="">Entradas</a>
-                    <a href="">Pratos Principais</a>
-                    <a href="">Sobremesas</a>
+                    <h4>Navegação</h4>
+                    <a href="#bolos">Bolos</a>
+                    <a href="#bebidas">Bebidas</a>
+                    <a href="#contato">Contato</a>
                 </nav>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sweet Cakes. Todos direitos reservados.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=100009527243773" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/gustavogpreti" target="_blank">Instagram</a>
-                    <a href="https://wa.me/554499010264" target="_blank">WhatsApp</a>
+                
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100009527243773" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/gustavogpreti" target="_blank">Instagram</a>
+                        <a href="https://wa.me/554499010264" target="_blank">WhatsApp</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-credits">
-                <p>Desenvolvido por:</p>
-                <div class="developer-links">
-                    <a href="https://www.instagram.com/gustavogpreti/" target="_blank">@gustavogpreti</a>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sweet Cakes. Todos os direitos reservados.</p>
+                <div class="footer-credits">
+                    <p>Desenvolvido por: <a href="https://www.instagram.com/gustavogpreti/" target="_blank">@gustavogpreti</a></p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Toggle menu mobile
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
-
 </html>
