@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 
+/* Definição das variáveis de cores e estilos */
 :root {
     --primary-color: #ff70a6; /* Rosa mais vibrante */
     --primary-dark: #ff4081;
@@ -23,6 +24,7 @@
     --transition: all 0.3s ease;
 }
 
+/* Estilos gerais do body */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-light);
@@ -35,6 +37,7 @@ body {
     line-height: 1.6;
 }
 
+/* Estilos do container */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -42,12 +45,13 @@ body {
     padding: 0 20px;
 }
 
+/* Estilos para imagens */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Botões */
+/* Estilos dos botões */
 .btn-primary, .btn-secondary {
     display: inline-block;
     padding: 14px 28px;
@@ -60,6 +64,7 @@ img {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos do botão primário */
 .btn-primary {
     background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
     color: white;
@@ -70,6 +75,7 @@ img {
     box-shadow: 0 6px 18px rgba(255, 64, 129, 0.3);
 }
 
+/* Estilos do botão secundário */
 .btn-secondary {
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
     color: var(--text-color);
@@ -80,7 +86,7 @@ img {
     box-shadow: 0 6px 18px rgba(255, 170, 112, 0.3);
 }
 
-/* Header */
+/* Estilos do header */
 header {
     background-color: var(--bg-color);
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
@@ -90,12 +96,14 @@ header {
     padding: 15px 0;
 }
 
+/* Estilos do container do header */
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Estilos do logo */
 .logo {
     display: flex;
     align-items: center;
@@ -123,6 +131,7 @@ header .container {
     font-style: italic;
 }
 
+/* Estilos do menu de navegação */
 .nav-menu {
     display: flex;
     gap: 30px;
@@ -155,6 +164,7 @@ header .container {
     width: 100%;
 }
 
+/* Estilos do botão de menu (para dispositivos móveis) */
 .nav-toggle {
     display: none;
     background: none;
@@ -162,6 +172,7 @@ header .container {
     cursor: pointer;
 }
 
+/* Estilos do ícone do menu (hamburger) */
 .hamburger {
     display: block;
     width: 25px;
@@ -188,7 +199,7 @@ header .container {
     top: 8px;
 }
 
-/* Hero Section */
+/* Estilos da seção Hero */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://source.unsplash.com/1600x900/?colorful,cake,pastry') no-repeat center center/cover;
     height: 550px;
@@ -228,12 +239,13 @@ header .container {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Main Content */
+/* Estilos do conteúdo principal */
 main {
     padding: 80px 0;
     position: relative;
 }
 
+/* Estilos do cabeçalho da seção */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -267,6 +279,7 @@ main {
     font-size: 17px;
 }
 
+/* Estilos da seção do menu */
 .menu-section {
     margin-bottom: 100px;
     position: relative;
@@ -298,12 +311,14 @@ main {
     z-index: -1;
 }
 
+/* Estilos do grid de produtos */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 35px;
 }
 
+/* Estilos do card de produto */
 .product-card {
     background-color: var(--bg-color);
     border-radius: var(--border-radius-lg);
@@ -329,6 +344,7 @@ main {
     box-shadow: 0 15px 30px rgba(255, 112, 166, 0.2);
 }
 
+/* Estilos da imagem do produto */
 .product-image {
     height: 220px;
     overflow: hidden;
@@ -357,6 +373,7 @@ main {
     transform: scale(1.08);
 }
 
+/* Estilos das informações do produto */
 .product-info {
     padding: 25px;
     position: relative;
@@ -387,7 +404,7 @@ main {
     border-radius: 50px;
 }
 
-/* Contact Section */
+/* Estilos da seção de contato */
 .contact-section {
     background-color: var(--bg-color);
     padding: 100px 0;
@@ -421,6 +438,7 @@ main {
     transform: rotate(-20deg);
 }
 
+/* Estilos do conteúdo da seção de contato */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -429,11 +447,11 @@ main {
     z-index: 1;
 }
 
+/* Estilos das informações de contato */
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: fit-content;
     background-color: var(--accent-light);
     padding: 30px;
     border-radius: var(--border-radius);
@@ -458,6 +476,7 @@ main {
     justify-content: center;
 }
 
+/* Estilos do formulário de contato */
 .contact-form {
     display: grid;
     gap: 25px;
@@ -491,7 +510,7 @@ main {
     box-shadow: 0 0 0 3px rgba(255, 112, 166, 0.1);
 }
 
-/* Footer */
+/* Estilos do rodapé */
 footer {
     background: linear-gradient(to right, #5d4037, #8d6e63);
     color: white;
