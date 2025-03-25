@@ -6,18 +6,8 @@
     text-decoration: none;
 }
 
-/* Definição das variáveis de cores e estilos */
+/* Definição das variaveis definidas como padrão e utilizadas durante o código */
 :root {
-    --primary-color: #ff70a6; /* Rosa mais vibrante */
-    --primary-dark: #ff4081;
-    --secondary-color: #ffaa70; /* Cor pêssego/laranja */
-    --accent-color: #ffd670; /* Amarelo dourado */
-    --accent-light: #fff0db; /* Bege claro */
-    --text-color: #5d4037; /* Marrom chocolate */
-    --text-light: #8d6e63; /* Marrom mais claro */
-    --bg-color: #fff;
-    --bg-light: #fef9f7; /* Fundo levemente rosado */
-    --bg-pattern: #fef2f7; /* Tom para padrões */
     --border-radius: 12px;
     --border-radius-lg: 24px;
     --shadow: 0 6px 20px rgba(255, 112, 166, 0.15);
@@ -27,13 +17,13 @@
 /* Estilos gerais do body */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-light);
+    background-color: #fef9f7;
     background-image: 
-        radial-gradient(var(--bg-pattern) 2px, transparent 2px),
-        radial-gradient(var(--bg-pattern) 2px, transparent 2px);
+        radial-gradient(#fef2f7 2px, transparent 2px),
+        radial-gradient(#fef2f7 2px, transparent 2px);
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
-    color: var(--text-color);
+    color: #5d4037;
     line-height: 1.6;
 }
 
@@ -59,14 +49,13 @@ img {
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos do botão primário */
 .btn-primary {
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(45deg, #ff70a6, #ff4081);
     color: white;
 }
 
@@ -75,10 +64,9 @@ img {
     box-shadow: 0 6px 18px rgba(255, 64, 129, 0.3);
 }
 
-/* Estilos do botão secundário */
 .btn-secondary {
-    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
-    color: var(--text-color);
+    background: linear-gradient(45deg, #ffaa70, #ffd670);
+    color: #5d4037;
 }
 
 .btn-secondary:hover {
@@ -88,7 +76,7 @@ img {
 
 /* Estilos do header */
 header {
-    background-color: var(--bg-color);
+    background-color: #fff;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
     position: fixed;
     width: 100%;
@@ -96,7 +84,6 @@ header {
     padding: 15px 0;
 }
 
-/* Estilos do container do header */
 header .container {
     display: flex;
     justify-content: space-between;
@@ -116,29 +103,29 @@ header .container {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--accent-light);
+    border: 3px solid #fff0db;
 }
 
 .logo h1 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    color: var(--text-color);
+    color: #5d4037;
     letter-spacing: 1px;
 }
 
 .logo h1 span {
-    color: var(--primary-color);
+    color: #ff70a6;
     font-style: italic;
 }
 
-/* Estilos do menu de navegação */
+/* Estilos da nav */
 .nav-menu {
     display: flex;
     gap: 30px;
 }
 
 .nav-menu li a {
-    color: var(--text-color);
+    color: #5d4037;
     font-weight: 500;
     position: relative;
     padding: 8px 0;
@@ -151,13 +138,13 @@ header .container {
     left: 0;
     width: 0;
     height: 3px;
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-    transition: var(--transition);
+    background: linear-gradient(to right, #ff70a6, #ffd670);
+    transition: all 0.3s ease;
     border-radius: 2px;
 }
 
 .nav-menu li a:hover {
-    color: var(--primary-color);
+    color: #ff70a6;
 }
 
 .nav-menu li a:hover::after {
@@ -172,12 +159,12 @@ header .container {
     cursor: pointer;
 }
 
-/* Estilos do ícone do menu (hamburger) */
+/* Estilos do ícone do menu */
 .hamburger {
     display: block;
     width: 25px;
     height: 2px;
-    background-color: var(--text-color);
+    background-color: #5d4037;
     position: relative;
 }
 
@@ -187,7 +174,7 @@ header .container {
     position: absolute;
     width: 25px;
     height: 2px;
-    background-color: var(--text-color);
+    background-color: #5d4037;
     left: 0;
 }
 
@@ -199,7 +186,7 @@ header .container {
     top: 8px;
 }
 
-/* Estilos da seção Hero */
+/* Estilos do Hero */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://source.unsplash.com/1600x900/?colorful,cake,pastry') no-repeat center center/cover;
     height: 550px;
@@ -239,13 +226,13 @@ header .container {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos do conteúdo principal */
+/* Estilos do main */
 main {
     padding: 80px 0;
     position: relative;
 }
 
-/* Estilos do cabeçalho da seção */
+/* Estilos do da section do header */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -255,7 +242,7 @@ main {
 .section-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
-    color: var(--text-color);
+    color: #5d4037;
     margin-bottom: 16px;
     position: relative;
     display: inline-block;
@@ -268,18 +255,18 @@ main {
     left: 25%;
     width: 50%;
     height: 4px;
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background: linear-gradient(to right, #ff70a6, #ffd670);
     border-radius: 2px;
 }
 
 .section-header p {
-    color: var(--text-light);
+    color: #8d6e63;
     max-width: 600px;
     margin: 0 auto;
     font-size: 17px;
 }
 
-/* Estilos da seção do menu */
+/* Estilos do menu */
 .menu-section {
     margin-bottom: 100px;
     position: relative;
@@ -311,7 +298,6 @@ main {
     z-index: -1;
 }
 
-/* Estilos do grid de produtos */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -320,11 +306,11 @@ main {
 
 /* Estilos do card de produto */
 .product-card {
-    background-color: var(--bg-color);
+    background-color: #fff;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     position: relative;
     border: 1px solid rgba(255, 112, 166, 0.1);
 }
@@ -336,7 +322,7 @@ main {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background: linear-gradient(to right, #ff70a6, #ffd670);
 }
 
 .product-card:hover {
@@ -366,7 +352,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .product-card:hover .product-image img {
@@ -382,12 +368,12 @@ main {
 .product-info h3 {
     font-size: 22px;
     margin-bottom: 12px;
-    color: var(--text-color);
+    color: #5d4037;
     font-weight: 600;
 }
 
 .product-info p {
-    color: var(--text-light);
+    color: #8d6e63;
     font-size: 15px;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -396,17 +382,17 @@ main {
 .product-price {
     font-size: 22px;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #ff70a6;
     margin-bottom: 20px;
     display: inline-block;
     padding: 5px 15px;
-    background-color: var(--accent-light);
+    background-color: #fff0db;
     border-radius: 50px;
 }
 
 /* Estilos da seção de contato */
 .contact-section {
-    background-color: var(--bg-color);
+    background-color: #fff;
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -452,7 +438,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--accent-light);
+    background-color: #fff0db;
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -466,7 +452,7 @@ main {
 
 .contact-item .icon {
     font-size: 28px;
-    color: var(--primary-color);
+    color: #ff70a6;
     background-color: rgba(255, 112, 166, 0.1);
     width: 50px;
     height: 50px;
@@ -481,21 +467,21 @@ main {
     display: grid;
     gap: 25px;
     padding: 40px;
-    background-color: var(--bg-color);
+    background-color: #fff;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    border: 1px dashed var(--accent-light);
+    border: 1px dashed #fff0db;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 15px 20px;
-    border: 2px solid var(--accent-light);
+    border: 2px solid #fff0db;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .contact-form textarea {
@@ -506,7 +492,7 @@ main {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: #ff70a6;
     box-shadow: 0 0 0 3px rgba(255, 112, 166, 0.1);
 }
 
@@ -526,7 +512,7 @@ footer::before {
     left: 0;
     right: 0;
     height: 20px;
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    background: linear-gradient(to right, #ff70a6, #ffd670);
 }
 
 .footer-content {
@@ -545,7 +531,7 @@ footer::before {
 }
 
 .footer-brand span {
-    color: var(--accent-color);
+    color: #ffd670;
     font-style: italic;
 }
 
@@ -564,7 +550,7 @@ footer::before {
 .footer-nav h4, .footer-social h4 {
     font-size: 20px;
     margin-bottom: 8px;
-    color: var(--accent-color);
+    color: #ffd670;
     position: relative;
     padding-bottom: 10px;
 }
@@ -576,19 +562,19 @@ footer::before {
     left: 0;
     width: 40px;
     height: 3px;
-    background: var(--primary-color);
+    background: #ff70a6;
     border-radius: 2px;
 }
 
 .footer-nav a, .social-links a {
     color: rgba(255, 255, 255, 0.8);
-    transition: var(--transition);
+    transition: all 0.3s ease;
     font-size: 15px;
     display: inline-block;
 }
 
 .footer-nav a:hover, .social-links a:hover {
-    color: var(--accent-color);
+    color: #ffd670;
     transform: translateX(5px);
 }
 
@@ -612,7 +598,7 @@ footer::before {
 }
 
 .footer-credits a {
-    color: var(--accent-color);
+    color: #ffd670;
     font-weight: 600;
 }
 
@@ -688,12 +674,12 @@ main::after {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: var(--bg-color);
+        background-color: #fff;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 40px;
-        transition: var(--transition);
+        transition: all 0.3s ease;
     }
     
     .nav-menu.active {

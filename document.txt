@@ -1,0 +1,3 @@
+para a estruturação do html foi utilizado do maior número possível de elementos semanticos com a função de deixa-lo mais simples a leitura do navegador e mais acessivel a leitores de tela.
+Acredito que dentre as tags html passiveis de utilização nesse código, as escolhidas foram as mais convenientes para suas determinadas situações.
+
