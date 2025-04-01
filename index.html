@@ -8,9 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="components.js"></script>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
     <!-- Header da página -->
     <header>
         <div class="container">
@@ -20,23 +24,42 @@
             </div>
             
             <!-- Botão para abrir o menu em dispositivos móveis -->
-            <button class="nav-toggle" aria-label="Abrir menu de navegação">
+            <button class="nav-toggle" 
+                    aria-label="Abrir menu de navegação" 
+                    aria-expanded="false"
+                    aria-controls="nav-menu">
                 <span class="hamburger"></span>
             </button>
             
             <!-- Menu de navegação principal -->
             <nav aria-label="Navegação principal">
-                <ul class="nav-menu">
-                    <li><a href="#bolos">Bolos</a></li>
-                    <li><a href="#bebidas">Bebidas</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="#bolos" role="menuitem">Bolos</a></li>
+                    <li role="none"><a href="#bebidas" role="menuitem">Bebidas</a></li>
+                    <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
                 </ul>
             </nav>
+
+            <!-- Carrinho de compras -->
+            <div class="cart-container">
+                <button class="cart-button" aria-label="Abrir carrinho">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" aria-label="0 itens no carrinho">0</span>
+                </button>
+                <div class="cart-dropdown" hidden>
+                    <div class="cart-items"></div>
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-amount">R$ 0,00</span>
+                    </div>
+                    <button class="btn-primary checkout-button">Finalizar Pedido</button>
+                </div>
+            </div>
         </div>
     </header>
     
     <!-- Seção Hero com destaque para o título e descrição -->
-    <div class="hero">
+    <div claoss="hero">
         <div class="container">
             <h2>Sabores que encantam</h2>
             <p>Bolos artesanais preparados com amor e ingredientes selecionados</p>
@@ -45,7 +68,7 @@
     </div>
 
     <!-- Conteúdo principal da página -->
-    <main>
+    <main id="main-content">
         <div class="container">
             <!-- Seção de Bolos -->
             <section id="bolos" class="menu-section">
@@ -55,7 +78,7 @@
                 </div>
                 
                 <!-- Grid de produtos (bolos) -->
-                <div id="bolos-grid" class="products-grid">
+                <div id="bolos-grid" class="products-grid" role="menu" aria-label="Lista de bolos disponíveis">
                     <!-- Produtos serão injetados aqui via JavaScript -->
                 </div>
             </section>

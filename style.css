@@ -8,22 +8,27 @@
 
 /* Definição das variaveis definidas como padrão e utilizadas durante o código */
 :root {
-    --border-radius: 12px;
+    --primary-color: #ff6b9f;
+    --secondary-color: #ffc2d7;
+    --accent-color: #ffea88;
+    --bg-color: #fff9fb;
+    --text-color: #ff4d85;
+    --border-radius: 20px;
     --border-radius-lg: 24px;
-    --shadow: 0 6px 20px rgba(255, 112, 166, 0.15);
+    --shadow: 0 8px 20px rgba(255, 107, 159, 0.2);
     --transition: all 0.3s ease;
 }
 
 /* Estilos gerais do body */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fef9f7;
+    background-color: var(--bg-color);
     background-image: 
         radial-gradient(#fef2f7 2px, transparent 2px),
         radial-gradient(#fef2f7 2px, transparent 2px);
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
-    color: #5d4037;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -44,39 +49,56 @@ img {
 /* Estilos dos botões */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    padding: 14px 28px;
-    border-radius: 50px;
+    padding: 12px 30px;
+    border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #ff70a6, #ff4081);
+    background: linear-gradient(45deg, var(--primary-color), #ff4081);
     color: white;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
+    transform: scale(1.1) rotate(-2deg);
     box-shadow: 0 6px 18px rgba(255, 64, 129, 0.3);
 }
 
 .btn-secondary {
-    background: linear-gradient(45deg, #ffaa70, #ffd670);
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
     color: #5d4037;
 }
 
 .btn-secondary:hover {
-    transform: translateY(-3px);
+    transform: scale(1.1) rotate(-2deg);
     box-shadow: 0 6px 18px rgba(255, 170, 112, 0.3);
+}
+
+.btn-secondary.add-to-cart {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary.add-to-cart.added {
+    background: linear-gradient(45deg, #4CAF50, #8BC34A);
+    transform: scale(1.05);
+}
+
+.btn-secondary.add-to-cart:active {
+    transform: scale(0.95);
 }
 
 /* Estilos do header */
 header {
-    background-color: #fff;
+    background: linear-gradient(135deg, var(--bg-color) 0%, white 100%);
+    border-bottom: 3px dotted var(--secondary-color);
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
     position: fixed;
     width: 100%;
@@ -107,9 +129,9 @@ header .container {
 }
 
 .logo h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Pacifico', cursive;
     font-size: 28px;
-    color: #5d4037;
+    color: var(--text-color);
     letter-spacing: 1px;
 }
 
@@ -304,29 +326,106 @@ main {
     gap: 35px;
 }
 
+/* Estilos dos filtros */
+.filtros {
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.filtro-grupo {
+    margin-bottom: 15px;
+}
+
+.filtro-grupo:last-child {
+    margin-bottom: 0;
+}
+
+.filtro-grupo label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.filtro-botoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filtro-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 20px;
+    background: white;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filtro-btn:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.filtro-btn.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Estilo para tags no card */
+.product-tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+}
+
+.product-tag {
+    background: var(--secondary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.product-tag.new {
+    background: #4CAF50;
+}
+
+.product-tag.special {
+    background: #FFC107;
+}
+
 /* Estilos do card de produto */
 .product-card {
     background-color: #fff;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
-    border: 1px solid rgba(255, 112, 166, 0.1);
+    border: 3px solid var(--secondary-color);
 }
 
 .product-card::before {
-    content: '';
+    content: '🧁';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(to right, #ff70a6, #ffd670);
+    top: -15px;
+    right: -15px;
+    font-size: 30px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
 }
 
 .product-card:hover {
-    transform: translateY(-12px) rotate(1deg);
+    transform: translateY(-15px) rotate(2deg);
     box-shadow: 0 15px 30px rgba(255, 112, 166, 0.2);
 }
 
@@ -373,21 +472,43 @@ main {
 }
 
 .product-info p {
-    color: #8d6e63;
+    color: #555;
     font-size: 15px;
     margin-bottom: 20px;
     line-height: 1.6;
 }
 
 .product-price {
-    font-size: 22px;
-    font-weight: 700;
-    color: #ff70a6;
+    background: var(--accent-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transform: rotate(-2deg);
     margin-bottom: 20px;
     display: inline-block;
-    padding: 5px 15px;
-    background-color: #fff0db;
-    border-radius: 50px;
+}
+
+/* Estilos para acessibilidade */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ff70a6;
+    color: white;
+    padding: 8px;
+    z-index: 1001;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Melhorias de foco */
+a:focus,
+button:focus {
+    outline: 3px solid #ff70a6;
+    outline-offset: 2px;
 }
 
 /* Estilos da seção de contato */
@@ -494,6 +615,132 @@ main {
     outline: none;
     border-color: #ff70a6;
     box-shadow: 0 0 0 3px rgba(255, 112, 166, 0.1);
+}
+
+/* Estilos do carrinho */
+.cart-container {
+    position: relative;
+}
+
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+}
+
+.cart-icon {
+    font-size: 24px;
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ff70a6;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    z-index: 1000;
+}
+
+.cart-dropdown[hidden] {
+    display: none;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-weight: 500;
+    color: #5d4037;
+}
+
+.cart-item-price {
+    color: #ff70a6;
+    font-size: 14px;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-button {
+    background: none;
+    border: 1px solid #ddd;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-top: 8px;
+    border-top: 2px solid #eee;
+}
+
+.checkout-button {
+    width: 100%;
+}
+
+/* Responsividade do carrinho */
+@media screen and (max-width: 768px) {
+    .cart-dropdown {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+        max-height: 80vh;
+    }
 }
 
 /* Estilos do rodapé */
